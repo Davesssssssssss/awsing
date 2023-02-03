@@ -1,0 +1,508 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Raleway:wght@100&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2b6214662f.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>House Rental Management System</title>
+  </head>
+
+  <body>
+    <!-- here navbar section -->
+   <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block align-text-top link">wsing</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class=" collapse navbar-collapse justify-content-end p-2 m-1" id="navbarNav">
+      <ul class="navbar-nav float-">
+        <li class="nav-item">
+          <a class="nav-link me-4 sm:float-right active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item me-4 ">
+          <a class="nav-link" href="#">Contacs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Login</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block link mt-1 align-text-top">wsing</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav text-center mt-n4">
+        <a class="nav-link active me-4" aria-current="page" href="#">Home</a>
+        <a class="nav-link me-4" href="#">Services</a>
+        <a class="nav-link me-4" href="#">Contact</a>
+        <a class="nav-link me-4" href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+       
+      </div>
+    </div>
+  </div>
+</nav>
+ <!-- end  navbar section -->
+ <!-- cover content -->
+ 
+ <div class="container-fluid  cover">
+   <div class="container-fluid ">
+   <h1  class="title-content-cover "><p class="text title-content-cover ">WE</p> HELP YOU TO FIND</h1>
+ </div>
+   <br>
+   <p class="para">AFFORDABLE AND BETTER ROOM</p>
+  <button type="button" class="btn btn-dark btn-link">Join Us</button>
+  
+<!-- Modal -->
+<div class="modal fade" id="NModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        
+        <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block link mt-1 align-text-top" style="color: white;">wsing register</p>
+    </a>
+        <button type="button"  data-bs-dismiss="modal" aria-label="Close">
+          X
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="userRegister" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="Userpass">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button  id="register" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+</form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<<div class="modal fade" id="RModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        
+        <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block link mt-1 align-text-top" style="color: white;">wsing register</p>
+    </a>
+        <button type="button"  data-bs-dismiss="modal" aria-label="Close">
+          X
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">First name</label>
+    <input type="email" class="form-control" id="fname" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">First name</div>
+  </div>
+ <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last name</label>
+    <input type="email" class="form-control" id="lname" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Last name</div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NModal" data-bs-dismiss="modal">Next</button>
+  
+ 
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark" >
+        <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block link mt-1 align-text-top" style="color: white;">wsing</p>
+    </a>
+        <button type="button"  data-bs-dismiss="modal" aria-label="Close">
+          X
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="username"  name="username">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="username">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <div id="demo"></div>
+  </div>
+  <button id="submit" type="submit" class="btn btn-primary" >Submit</button>
+   <!--  <button class="hide"id="showpassword"  onclick=" show() "><i class="fa-solid fa-eye-slash"></i></button>
+         <button class="hides"id="hidepassword"  onclick=" show() "><i class="fa-solid fa-eye"></i></button> -->
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#RModal" data-bs-dismiss="modal">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+ </div>
+ <!-- end cover content -->
+ <div class="section group">
+  <div class="col span_1_of_2">
+  <div class="row">
+    <div class="col-lg-12 h-5">
+      <div class="row">
+        <div class="col-lg-12 ">
+         <h1 class="sert-text">Our Services</h1>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 m-2 w-40">
+      <div class="row service-row" >
+            <div class="col-lg-12 m-2 container-service ">
+              <p class="para-text">Our Services   are  we  offers  good  services and  you can  now pay online   for the  House  payment  and  for  the  room  we have  affordable  room  you  can choose     you can  also take  reservation  if  you want be reserve  the room  then  for the maintenance  and cleanliness  they  have  assign duty  to maintain  the  village   then    for  complain  we are   always  open  for   your complain  and Question so  for  that  you can  contact  our support  or you can message up </p>
+            </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col span_1_of_2 image-container-service" >
+   <div class="container-fluid">
+     <img  class="image-content" src="sd.jpg" >
+   </div>
+  </div>
+</div>
+<br>
+<div class="container-fluid  bg-dark   features-container" >
+  <div class="row features-container-row" >
+  <div class="col-lg-2 bg-secondary payment-container" >
+    <div class="row">
+      <div class="col-lg-1 ">
+       <img src="payment.png" style="height: 170px; width: 170px; margin-top: 40px; margin-left: 60px;">
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 bg-secondary funds-container">
+     <img src="funds.png" style="height: 170px; width: 170px; margin-top: 40px; margin-left: 60px;">
+  </div>
+  <div class="col-lg-2 bg-secondary compute-container"  >
+    <img src="Compute.png" style="height: 170px; width: 170px; margin-top: 40px; margin-left: 60px;">
+  </div>
+  <div class="col-lg-2 bg-secondary reserve-container"  >
+     <img src="reserve.png" style="height: 170px; width: 170px; margin-top: 40px; margin-left: 60px;">
+  </div>
+</div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container-fluid" style="margin-top: 20px;">
+     <img  class=" feature-image" src="fts.jpg"  >
+   </div>
+      </div>
+        <div class="col-lg-6">
+        <div class="container-fluid">
+          <div class="col-lg-12 h-5">
+      <div class="row">
+        <div class="col-lg-12 ">
+         <h1 class=" feature-title">Our Features</h1>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 m-2 w-40">
+      <div class="row  feature-box " >
+            <div class="col-lg-12 m-2    features-container-box ">
+              <p class=" feature-text">Our  feature    you can  payonline and In   every december they have  discount 20%    and  cleanliness   of  the  area   they  have  maintenance    on that   and  for the security  they  have an  24 hrs  cctv   survelliance    camera  can manage  so that   no  stranger   can  allowed  go village without permission   every  december   they have  event   christmass party  , smallconcert, rafflehey   own   waterhose   evrry  apartment  aside on that  you can  choose  your  room  you can  deluxe   which  is  contain  aircon And  for normal reservation   they  also   aircon  but  different from  the  deluxeso  if  you are   interested   join  us  reserve  your  dream  affordable </p>
+            </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container-fluid container-feature bg-dark ">
+  <div class="row container-feature-row">
+    <div class="col-lg-3  container-feature-content1" >
+           
+       <div class="container-fluid bg-dark container-feature-innercontent1">
+           
+       </div>
+       <div class="container  container-feature-uppercontent">
+         <div class="row container-shape-row" >
+           <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+            <div class="col-lg-2 "style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;" ></div>
+             <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+              <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+               <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+                <div class="col-lg-2 btn-comment" ></div>
+                     <label class="container-feature-title" style="margin-top: -20px; color: white;">Sibugay Zamboanga</label>
+         </div>
+       </div>
+      
+    </div>
+    <div class="col-lg-3 bg-danger container-feature1">
+      <div class="container-fluid bg-dark container-feature-cover">
+           
+       </div>
+       <div class="container  container-feature-innercontent-cover" >
+         <div class="row inner-box" >
+           <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+            <div class="col-lg-2 "style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;" ></div>
+             <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+              <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+               <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+                <div class="col-lg-2 btn-comment "></div>
+                 <label  class="container-feature-title1">Mactan Lapu Lapu City</label>
+
+         </div>
+       </div>
+    </div>
+    <div class="col-lg-3 bg-secondary  container-feature2">
+      <div class="container-fluid bg-dark container-feature-innercontent-cover1" >
+           
+       </div>
+       <div class="container  " style="position: absolute; margin-left: -10px; margin-top: -50px; width: 297px; height: 50px;">
+         <div class="row" style=" margin-left: -24px; margin-top: 2px;">
+           <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+            <div class="col-lg-2 "style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;" ></div>
+             <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+              <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+               <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+                <div class="col-lg-2  btn-comment" ></div>
+                  <label  class="container-feature-title2">Basak Pardo Cebu City</label>
+         </div>
+       </div>
+    </div>
+    <div class="col-lg-3 last-content" >
+       <div class="container-fluid bg-dark last-content-cover" >
+           
+       </div>
+       <div class="container  " style="position: absolute; margin-left: -10px; margin-top: -50px; width: 297px; height: 50px;"  onclick="initMap()">
+         <div class="row" style=" margin-left: -24px; margin-top: 2px;">
+           <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+            <div class="col-lg-2 "style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;" ></div>
+             <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+              <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+               <div class="col-lg-2 " style="height: 25px; width: 25px; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: #fcaa05;"></div>
+                <div class="col-lg-2 " style=" height: 45px; width: 45px; margin-left: 110px; background-image: url('cm.png'); background-size: cover; background-position: cover; background-repeat: no-repeat; margin-top: -5px;">
+                  <button onclick="displaycomment()" style="height: 45px; width: 45px; background: transparent; border: none;"></button>
+                </div>
+                     <label class="container-feature-title3" >Narvacan Ilocus sur </label>
+         </div>
+       </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid " style="height: 200px; margin-top: 20px;">
+  <div class="row">
+    <div class="col-lg-6 ">
+      <div id="map" style="width:100%;height:400px;"></div>
+    </div>
+     <div class="col-lg-6">
+      <div class="row">
+        <div class="sm-12">
+
+          <h1 class="sert-text">Our Branches</h1>
+        </div>
+        <div class="sm-12">
+           <div class="row">
+             <div class=" col-6 ">
+               <div class="container  bg-dark" style="height: 120px; width: 300px;">
+                 <h2 style="color: white; text-align: center; padding-top: 39px;   ">2500</h2>
+                 
+               </div>
+                   <div class="col-6">
+              <h2 style="font-size: 12pt;  margin-left: 40px;">Local Branch</h2>
+             <button type="button" class="btn btn-primary" style="margin-left: 40px;">View</button>
+            </div>
+             </div>
+               <div class="col-6 bg-dark" style="width: 300px; height: 0px;">
+              <div class="container  bg-dark"  style="height: 120px;">
+                 <h2 style="color: white; text-align: center; padding-top: 39px;   ">1500</h2>
+                 
+               </div>
+                 <h2 style="font-size: 12pt;  margin-left: 40px;">Global Branch</h2>
+             <button type="button" class="btn btn-primary" style="margin-left: 40px;">View</button>
+             </div>
+               
+           </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            
+            
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+</div>
+<div class="container-fluid "  style="margin-top: 220px; height: 500px;">
+  <div class="row">
+    <div class="col-6">
+      <div class="container">
+         <h1 class="sert-text">About Us</h1>
+         <div class="container " style="margin-top: 40px;">
+        <div class="container-box " style="width: 400px; margin-left: 124px; height: 200px;">
+          <p class=" feature-text">In my  Team we  Start  from nothing   with my  team  many   rejection that we had encounter   Being  nothing its not  barriers  for you to  stop  learnings  or stop  improve  your  skills  although its  give you dedication to motivate  your  self  to keep   learn more and  explore and improve   even other people  will  down you will descrimanate you  don’t mind on that because  the more  </p>
+        </div>
+         </div>
+      </div>
+    </div>
+     <div class="col-6 ">
+        <div class="container ">
+              <div class="row">
+                <div class="lg-4">
+                  <div class="design1 bg-dark" style="clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); height: 150px; width: 150px; margin-top: 10px; margin-left: 100px;">
+                    here
+                  </div>
+                </div>
+                <div class="lg-4">
+                  <div class="design1 bg-dark" style="clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); height: 150px; width: 150px; margin-top: 10px; margin-left: 218px; position: absolute;  top: 345%;">
+                    here
+                  </div>
+                </div>
+                <div class="lg-4">
+                        <div class="design1 bg-dark" style="clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); height: 150px; width: 150px; margin-top: 10px; margin-left: 100px; position: absolute;  top: 355%;">
+                    here
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  <a href="https://drive.google.com/drive/folders/1nBP93OeEZeB7DHgvEmGYCFviC4f58LFM?usp=sharing">defcon</a>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+ <script>  
+ function displaycomment() {
+   alert("success")
+   // body...
+ }
+  // Initialize and add the map
+function initMap() {
+  // The location of Uluru
+ 
+
+  const uluru = { lat: 10.2995697, lng: 124.0056916};
+   const Mactan = { lat: 10.29445697, lng: 124.0052916};
+   const Narvacan = { lat: 17.463462, lng: 120.493362};
+    const Compostelacebu = { lat: 10.4659, lng: 123.980576};
+
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 8,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+  const Mactanmarkers = new google.maps.Marker({
+    position: Mactan,
+    map: map,
+  });
+   const Narvacnnmarkers = new google.maps.Marker({
+    position: Narvacan,
+    map: map,
+  });
+   const CompostelaCEBUnmarkers = new google.maps.Marker({
+    position: Compostelacebu ,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+
+</script>  
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCqW62982wK_cz3YKMk_0N25OlRVnSVk&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script src="login.js"></script>
+</html>initMap

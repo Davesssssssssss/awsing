@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+  <style type="text/css">
+    .btn-delete{
+      position: absolute;
+      background: #ff2930;
+      border: none;
+      color: white;
+      padding: 10px;
+      margin-left: -50px;
+      border-radius: 5px;
+    
+
+
+    }
+    .btn-view{
+       background: blue;
+      border: none;
+      color: white;
+      padding: 10px;
+       border-radius: 5px;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#">
+      <img src="log.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+    <p class="d-inline-block link mt-1 align-text-top">wsing</p>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav text-center mt-n4">
+        <a class="nav-link active me-4" aria-current="page" href="#">Adminastrator</a>
+       
+        <a class="nav-link me-4" href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">logout</a>
+       
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 " style="height: 46.9vw; background: #39423b;">
+           <div class="container-fluid">
+             <div class="row"  style="width: 260px;">
+               <div class="sm-3" style=" margin-left: -20px; width: 360px; padding: 20px;">
+                <a  style="text-decoration: none;" onclick="goemailregister()"> <p style="color: white; text-align: center; cursor: pointer;">view client information</p></a>
+               </div>
+               <div class="sm-3" style=" margin-left: -20px; width: 360px; padding: 20px; background: black;">
+                  <a href="reservation.html" style="text-decoration: none;"><p style="color: white; text-align: center; cursor: pointer;">view client reservation</p></a>
+               </div>
+               
+                
+                <div class="sm-3 " style=" margin-left: -20px; width: 360px; padding: 20px;">
+                  <a  style="text-decoration: none;"><p style="color: white; text-align: center; cursor: pointer;" onclick="gotransac()"> View Transaction</p></a>
+               </div>
+             </div>
+           </div>
+            
+           </div>
+
+    <div class="col-8">
+          <table class="table table-striped" >
+  <thead>
+    <tr>
+      
+      <th scope="col">Reservationname</th>
+      <th scope="col">Appartname</th>
+      <th scope="col">status</th>
+       <th scope="col">Landmark</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody id="table">
+     
+  </tbody>
+
+</table>
+    </div>
+    <div  id="myDIV" class="col-2  " style="height: 46.9vw; background: #39423b;">
+              <h3 style="color: white;">User Monitoring</h3>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="lg-col-12 " style="  position: relative; left: -11%; width: 350px; height: 60px;">
+                    <div class="Toggle" id="Toggle" style="background: green; border-radius: 20px; width: 20px; height: 20px; position: absolute; top: 20%;display: none;">
+                      
+                    </div>
+                    <div  id="activeuser" style=" width: 200px; height: 50px; position: absolute; left: 50px; color: white; top: 10%; font-size: 14pt;">
+                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+</div>
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Reservation-Name</label>
+    <input type="text" class="form-control" id="Reservationname" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Appartment</label>
+    <input type="text" class="form-control" id="appartname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Date</label>
+    <input type="text" class="form-control" id="Date">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+      </div>
+      <div class="modal-footer">
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script type="text/javascript">
+
+      $.ajax({
+    url: "admin.php",
+    type: "POST",
+    cache: false,
+    success: function(response){
+      const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date();
+let month = months[d.getMonth()];
+     var response = JSON.parse(response);
+     alert(response)
+      var str = "";
+            let ctr = 1;
+            response.forEach(element => {
+             
+                    str += "<tr>";
+                str += "<td>"+element.reservationname+"</td>";
+                str += "<td>"+element.appartname+"</td>";
+                str += "<td>"+"active"+"</td>";
+                  str += "<td>"+element.appartname+"</td>";
+                    str += "<td>"+month+"</td>";
+                  str += "<td>"+"<button id=del type=button class=btn-delete onclick='del("+ctr+")'>"+"Cancel"+ "</button>"+"</td>";
+                    str += "<td>"+"<button id=approve type=button class= btn-view  onclick='Approve_DATA("+ JSON.stringify(element.reservationname)+","+ JSON.stringify(element.appartname)+")'; data-bs-toggle=modal data-bs-target=#updateModal>"+"Details"+ "</button>"+"</td>";
+                str += "</tr>";
+                ctr++;
+              
+                
+            });
+
+      $('#table').append(str);
+    
+    var table = document.getElementById("table");
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+    let verify = table.rows[i].cells[j].innerHTML
+    if (verify !="undefined") {
+    
+    alert(verify)     
+ 
+
+        
+   
+
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+    let verify = table.rows[i].cells[j].innerHTML
+   
+        
+    
+     if (verify != "undefined") {
+          
+    
+     }
+     else{
+         var y= document.getElementById("table").deleteRow(11);
+      var y= document.getElementById("table").deleteRow(i);
+                  var y= document.getElementById("table").deleteRow(i);
+                  var y= document.getElementById("table").deleteRow(i);
+                  var y= document.getElementById("table").deleteRow(i);
+                  var y= document.getElementById("table").deleteRow(i);
+                 
+          
+     }
+    
+         
+         
+    }
+   }  
+
+   
+    
+     
+       
+         
+    }
+    else{
+         var y= document.getElementById("table").deleteRow(i);
+                  var y= document.getElementById("table").deleteRow(i);
+                  
+                    
+
+
+
+    }
+
+   }  
+}
+      
+
+       
+    }
+
+  });
+      function del(ID) {
+          var y= document.getElementById("table").deleteRow(0);
+        // body...
+      }
+      
+function Approve_DATA(clientname,amountmoney){
+   
+    let reservationname = document.getElementById("Reservationname").value = clientname;
+    let appartname = document.getElementById("appartname").value = amountmoney;
+
+  
+}
+  $.ajax({
+
+        type: 'POST',
+        url: 'client.php',
+       
+        success: function(data) {
+         var data = JSON.parse(data);
+     
+    
+      var str = "";
+            let ctr = 1;
+            data.forEach(element => {
+
+                
+                str += "<p id=ownername >"+element.ownername+"</p> ";
+                
+                   
+               
+                ctr++;
+            })
+          $('#activeuser').append(str);
+  for (var i = 0; i<data.length; i++) {
+    var x = "";
+   let name = document.getElementById("ownername").innerHTML
+            if (name =="undefined") {
+    
+              let list = document.getElementById("activeuser")
+               let Toggle = document.getElementById("Toggle").style.display="block"
+                    if (list.hasChildNodes()) {
+                       list.style.display ="block"
+                          //x += list.removeChild(list.children[i]);
+ for (var z = 1; z<data.length; z++) {
+x += list.removeChild(list.children[i]);
+ }
+ 
+                        
+                      
+  
+                       
+             }
+
+           }
+        }
+        }
+    });
+   function gotransac(){
+          let gotransac = "transac";
+           $.ajax({
+        type: 'POST',
+        url: 'admin.php',
+        data: { gotransac: gotransac},
+        success: function(response) {
+          window.location.href="transaction.html";
+            alert("welcome to transaction");
+
+        }
+    });
+        }
+        function goemailregister() {
+           let adminviewregister = "goregister";
+           $.ajax({
+        type: 'POST',
+        url: 'admin.php',
+        data: { adminviewregister: adminviewregister},
+        success: function(response) {
+          
+                window.location.href="admin.html"
+        }
+    });
+        }
+  </script>
+</html>
